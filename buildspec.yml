@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+  pre_build:
+    commands:
+      - export PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH
+  build:
+    commands:
+      - echo Build started on `date`
+      - javac Simple.java
+      - java Simple
+  post_build:
+    commands:
+      - echo Build completed on `date`  
+    finally:  
+      - echo Build completed on `date`  
