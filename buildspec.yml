@@ -10,8 +10,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - javac Simple.java
-      - java Simple
+      - javac Simple.java      
   post_build:
     commands:
       - echo Build completed on `date`  
